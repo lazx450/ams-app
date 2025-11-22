@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 360px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.primary { background: #4c6ef5; color: white; }
+.google { background: white; color: black; }
+.facebook { background: #1877f2; color: white; }
+
+.divider {
+    margin: 15px 0;
+    opacity: 0.5;
+}
