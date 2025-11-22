@@ -76,3 +76,10 @@ function loginFacebook() {
         })
         .catch(err => alert(err.message));
 }
+apiKey: "AIzaSyB804LUYICFN--q7340sxxxx",
+authDomain: "abms-6243c2.firebaseapp.com",
+projectId: "abms-6243c2",
+storageBucket: "abms-6243c2.appspot.com",
+messagingSenderId: "624873038904",
+appId: "1:624873038904:web:26df8244573dcace67cd",
+measurementId: "G-PMYLW0B397"
