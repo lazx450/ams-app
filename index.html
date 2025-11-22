@@ -7,7 +7,41 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<body>
 
+    <!-- SLIME TEMPLATE -->
+    <div class="slime-drip"></div>
+
+    <!-- Slime droplets -->
+    <div class="slime-drop" style="left: 20%; animation-delay: 0.2s;"></div>
+    <div class="slime-drop" style="left: 50%; animation-delay: 0.6s;"></div>
+    <div class="slime-drop" style="left: 80%; animation-delay: 1s;"></div>
+    <!-- END SLIME TEMPLATE -->
+
+    <div class="container">
+        <h2 id="title">Welcome to ABMS</h2>
+
+        <select id="lang" onchange="changeLang()">
+            <option value="en">English</option>
+            <option value="id">Indonesia</option>
+            <option value="my">Malaysia</option>
+            <option value="th">Thailand</option>
+        </select>
+
+        <input id="email" type="email" placeholder="Email" />
+        <input id="password" type="password" placeholder="Password" />
+
+        <button onclick="loginEmail()" class="btn primary" id="loginBtn">Login</button>
+
+        <div class="divider">OR</div>
+
+        <button onclick="loginGoogle()" class="btn google">Login with Google</button>
+        <button onclick="loginFacebook()" class="btn facebook">Login with Facebook</button>
+    </div>
+
+    <script src="app.js"></script>
+
+    </body>
     <div class="container">
         <h2 id="title">Welcome to ABMS</h2>
 
