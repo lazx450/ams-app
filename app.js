@@ -29,47 +29,13 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 
-// ==========================
-//  LOGIN EMAIL
-// ==========================
-function loginEmail() {
-    let email = document.getElementById("email").value;
-    let pass = document.getElementById("password").value;
-
-    auth.signInWithEmailAndPassword(email, pass)
-        .then(() => {
-            alert("Login success!");
-            window.location.href = "dashboard.html";
-        })
-        .catch(err => alert(err.message));
-}
+.then(() => {
+    alert("Google Login success!");
+    window.location.href = "index_dasbrod.html";
+})
 
 
-// ==========================
-//  LOGIN GOOGLE
-// ==========================
-function loginGoogle() {
-    let provider = new firebase.auth.GoogleAuthProvider();
-
-    auth.signInWithPopup(provider)
-        .then(() => {
-            alert("Google Login success!");
-            window.location.href = "dashboard.html";
-        })
-        .catch(err => alert(err.message));
-}
-
-
-// ==========================
-//  LOGIN FACEBOOK
-// ==========================
-function loginFacebook() {
-    let provider = new firebase.auth.FacebookAuthProvider();
-
-    auth.signInWithPopup(provider)
-        .then(() => {
-            alert("Facebook Login success!");
-            window.location.href = "dashboard.html";
-        })
-        .catch(err => alert(err.message));
-}
+.then(() => {
+    alert("Facebook Login success!");
+    window.location.href = "index_dasbrod.html";
+}) 
