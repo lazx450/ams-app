@@ -2,22 +2,10 @@
 //  LANG SYSTEM
 // ==========================
 const langText = {
-    en: {
-        title: "Welcome to ABMS",
-        login: "Login"
-    },
-    id: {
-        title: "Selamat Datang di ABMS",
-        login: "Masuk"
-    },
-    my: {
-        title: "Selamat Datang ke ABMS",
-        login: "Masuk"
-    },
-    th: {
-        title: "ยินดีต้อนรับสู่ ABMS",
-        login: "เข้าสู่ระบบ"
-    }
+    en: { title: "Welcome to ABMS", login: "Login" },
+    id: { title: "Selamat Datang di ABMS", login: "Masuk" },
+    my: { title: "Selamat Datang ke ABMS", login: "Masuk" },
+    th: { title: "ยินดีต้อนรับสู่ ABMS", login: "เข้าสู่ระบบ" }
 };
 
 function changeLang() {
@@ -31,12 +19,13 @@ function changeLang() {
 //  FIREBASE CONFIG
 // ==========================
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
+    apiKey: "YOUR_KEY",
+    authDomain: "YOUR_AUTH.firebaseapp.com",
+    projectId: "YOUR_ID",
 };
 
 firebase.initializeApp(firebaseConfig);
+
 const auth = firebase.auth();
 
 
