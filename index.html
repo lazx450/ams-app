@@ -1,50 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ABMS Login</title>
+<!-- FIREBASE CDN -->
+<script type="module">
+  // Firebase Base
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { 
+    getAuth, 
+    GoogleAuthProvider, 
+    signInWithPopup 
+  } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  const firebaseConfig = {
+    apiKey: "AIzaSyB0Q4lKylzCFN-7-_q7340SwSB2ETgI0pw",
+    authDomain: "abms-6632c.firebaseapp.com",
+    projectId: "abms-6632c",
+    storageBucket: "abms-6632c.firebasestorage.app",
+    messagingSenderId: "624837038904",
+    appId: "1:624837038904:web:26df8824457f3cdaec67cd",
+    measurementId: "G-PMY1WQB3P7"
+  };
 
-    <!-- ================= SLIME EFFECT ================= -->
-    <div class="slime-drip"></div>
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
 
-    <div class="slime-drop" style="left: 25%; animation-delay: 0.2s;"></div>
-    <div class="slime-drop" style="left: 55%; animation-delay: 0.6s;"></div>
-    <div class="slime-drop" style="left: 80%; animation-delay: 1s;"></div>
-    <!-- ================================================= -->
-
-    <!-- LANGUAGE SELECTOR -->
-    <div class="lang-box">
-        <select id="lang" onchange="changeLang()">
-            <option value="en">English</option>
-            <option value="id">Indonesia</option>
-            <option value="my">Malaysia</option>
-            <option value="th">Thailand</option>
-        </select>
-    </div>
-
-    <div class="container">
-        <h1 id="title">ABMS Login</h1>
-
-        <input type="email" id="email" placeholder="Email" />
-        <input type="password" id="password" placeholder="Password" />
-
-        <button class="btn primary" onclick="loginEmail()" id="loginBtn">Login</button>
-
-        <div class="divider" id="orText">OR</div>
-
-        <button class="btn google" onclick="loginGoogle()" id="googleBtn">Login with Google</button>
-        <button class="btn facebook" onclick="loginFacebook()" id="fbBtn">Login with Facebook</button>
-    </div>
-
-    <!-- ============ JAVASCRIPT FILES ============ -->
-    <script type="module" src="firebase.js"></script>
-    <script type="module" src="app.js"></script>
-    <!-- ========================================== -->
-
-</body>
-</html>
+  // FUNC LOGIN GOOGLE
+  window.loginGoogle = function () {
+    signInWithPopup(auth, provider)
+      .then(result => {
+        alert("Login sukses: " + result.user.email);
+        console.log(result.user);
+      })
+      .catch(error => {
+        alert("Error: " + error.message);
+        console.error(error);
+      });
+  };
+</script>
