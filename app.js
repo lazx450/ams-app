@@ -1,5 +1,5 @@
 // ==========================
-//  LANG SYSTEM
+//  LANGUAGE SYSTEM
 // ==========================
 const langText = {
     en: { title: "Welcome to ABMS", login: "Login" },
@@ -15,19 +15,21 @@ function changeLang() {
 }
 
 
-
 // ==========================
 //  FIREBASE CONFIG
 // ==========================
 const firebaseConfig = {
-    apiKey: "YOUR_KEY",
-    authDomain: "YOUR_AUTH.firebaseapp.com",
-    projectId: "YOUR_ID",
+    apiKey: "AIzaSyBQ40Lyk1CFN-7_q7345DojyC2JFEq4Gqw",
+    authDomain: "abms-6623c.firebaseapp.com",
+    projectId: "abms-6623c",
+    storageBucket: "abms-6623c.appspot.com",
+    messagingSenderId: "624837038904",
+    appId: "1:624837038904:web:26df824457f3daec6c7cfd",
 };
 
+// INIT
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
-
 
 
 // ==========================
@@ -39,12 +41,11 @@ function loginEmail() {
 
     auth.signInWithEmailAndPassword(email, pass)
         .then(() => {
-            alert("Login success!");
-            window.location.href = "index_dasbrod.html";  // FIX
+            alert("Login Success!");
+            window.location.href = "index_dasbrod.html";
         })
         .catch(err => alert(err.message));
 }
-
 
 
 // ==========================
@@ -55,12 +56,11 @@ function loginGoogle() {
 
     auth.signInWithPopup(provider)
         .then(() => {
-            alert("Google Login success!");
-            window.location.href = "index_dasbrod.html";  // FIX
+            alert("Google Login Success!");
+            window.location.href = "index_dasbrod.html";
         })
         .catch(err => alert(err.message));
 }
-
 
 
 // ==========================
@@ -71,8 +71,8 @@ function loginFacebook() {
 
     auth.signInWithPopup(provider)
         .then(() => {
-            alert("Facebook Login success!");
-            window.location.href = "index_dasbrod.html";  // FIX
+            alert("Facebook Login Success!");
+            window.location.href = "index_dasbrod.html";
         })
         .catch(err => alert(err.message));
-                                       }
+}
